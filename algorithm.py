@@ -11,9 +11,8 @@ class Genetic:
 		self.t = 1000
 		self.p_cross = (0.50 + self.yz /100)
 		self.p_mut = (0.003 + self.yz/10000)
-  
 		bounds = [[-5.0, 5.0], [-5.0, 5.0]]
-		best, score = self.genetic_algorithm(self.fitness_function, bounds, )
+		best, score = self.genetic_algorithm(self.fitness_function, bounds)
 		print('Done!')
 		decoded = self.decode(bounds, self.l, best)
 		print('f(%s) = %f' % (decoded, score))
